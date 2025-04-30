@@ -105,7 +105,7 @@ export const searchNotes = async (req: Request, res: Response) => {
       userId,
       isArchived: false,
       $or: [{ title: regex }, { content: regex }],
-    });
+    }).lean();
     res.status(200).json(notes);
   } catch (error) {
     if (error instanceof Error) {
