@@ -12,7 +12,7 @@ const options: swaggerJSDoc.Options = {
     },
     servers: [
       {
-        url: "https://notes-api-a6e8.onrender.com",
+        url: "https://notes-api-a6e8.onrender.com/api",
       },
     ],
     components: {
