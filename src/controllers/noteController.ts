@@ -101,7 +101,7 @@ export const searchNotes = async (req: Request, res: Response) => {
 
     const regex = new RegExp(query, "i");
 
-    const notes = Note.find({
+    const notes = await Note.find({
       userId,
       isArchived: false,
       $or: [{ title: regex }, { content: regex }],
